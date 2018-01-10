@@ -1,0 +1,213 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/flavio/2016/4/UC1#"
+     xml:base="http://www.semanticweb.org/flavio/2016/4/UC1"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:untitled-ontology-2="http://www.semanticweb.org/flavio/2016/4/UC1#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/flavio/2016/4/UC1"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/flavio/2016/4/UC1#detectedAt -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/flavio/2016/4/UC1#detectedAt"/>
+    
+
+
+    <!-- http://www.semanticweb.org/flavio/2016/4/UC1#hasFriend -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/flavio/2016/4/UC1#hasFriend"/>
+    
+
+
+    <!-- http://www.semanticweb.org/flavio/2016/4/UC1#lives -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/flavio/2016/4/UC1#lives"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/flavio/2016/4/UC1#email -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/flavio/2016/4/UC1#email"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/flavio/2016/4/UC1#Adult -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/flavio/2016/4/UC1#Adult">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/flavio/2016/4/UC1#Age"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/flavio/2016/4/UC1#Age -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/flavio/2016/4/UC1#Age"/>
+    
+
+
+    <!-- http://www.semanticweb.org/flavio/2016/4/UC1#City -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/flavio/2016/4/UC1#City"/>
+    
+
+
+    <!-- http://www.semanticweb.org/flavio/2016/4/UC1#Elder -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/flavio/2016/4/UC1#Elder">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/flavio/2016/4/UC1#Age"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/flavio/2016/4/UC1#Interest -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/flavio/2016/4/UC1#Interest"/>
+    
+
+
+    <!-- http://www.semanticweb.org/flavio/2016/4/UC1#SurfSpot -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/flavio/2016/4/UC1#SurfSpot"/>
+    
+
+
+    <!-- http://www.semanticweb.org/flavio/2016/4/UC1#Surfer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/flavio/2016/4/UC1#Surfer">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/flavio/2016/4/UC1#Surfing"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/flavio/2016/4/UC1#detectedAt"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/flavio/2016/4/UC1#SurfSpot"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/flavio/2016/4/UC1#Surfing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/flavio/2016/4/UC1#Surfing">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/flavio/2016/4/UC1#Interest"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/flavio/2016/4/UC1#Young -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/flavio/2016/4/UC1#Young">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/flavio/2016/4/UC1#Age"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/flavio/2016/4/UC1#Flavio -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/flavio/2016/4/UC1#Flavio">
+        <rdf:type rdf:resource="http://www.semanticweb.org/flavio/2016/4/UC1#Surfing"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/flavio/2016/4/UC1#Young"/>
+        <detectedAt rdf:resource="http://www.semanticweb.org/flavio/2016/4/UC1#Pipe"/>
+        <lives rdf:resource="http://www.semanticweb.org/flavio/2016/4/UC1#Paris"/>
+        <email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">yo@example.com</email>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/flavio/2016/4/UC1#Karl -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/flavio/2016/4/UC1#Karl">
+        <rdf:type rdf:resource="http://www.semanticweb.org/flavio/2016/4/UC1#Surfing"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/flavio/2016/4/UC1#Young"/>
+        <detectedAt rdf:resource="http://www.semanticweb.org/flavio/2016/4/UC1#SnapperRocks"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/flavio/2016/4/UC1#Mary -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/flavio/2016/4/UC1#Mary">
+        <rdf:type rdf:resource="http://www.semanticweb.org/flavio/2016/4/UC1#Surfing"/>
+        <hasFriend rdf:resource="http://www.semanticweb.org/flavio/2016/4/UC1#Flavio"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/flavio/2016/4/UC1#Paris -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/flavio/2016/4/UC1#Paris">
+        <rdf:type rdf:resource="http://www.semanticweb.org/flavio/2016/4/UC1#City"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/flavio/2016/4/UC1#Pipe -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/flavio/2016/4/UC1#Pipe">
+        <rdf:type rdf:resource="http://www.semanticweb.org/flavio/2016/4/UC1#SurfSpot"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/flavio/2016/4/UC1#SnapperRocks -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/flavio/2016/4/UC1#SnapperRocks">
+        <rdf:type rdf:resource="http://www.semanticweb.org/flavio/2016/4/UC1#SurfSpot"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.1.20160306-0033) https://github.com/owlcs/owlapi -->
+
