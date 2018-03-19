@@ -2,27 +2,6 @@
 
 This reasoner, implemented in Java, is built upon _PELLET_ (OWL-DL reasoner) to reason on similarities. The provided API consists of a SPARQL interface which allows accessing the reasoner's functionalities pervasively.
 
-This API uses the following libraries:
-* antirall-2.7.6.jar
-* arq-2.8.7.jar
-* aterm-java-1.8.2.jar
-* com.ibm.icu_3.4.4.1.jar
-* concurrent-10.3.jar
-* iri.jar
-* jena.jar
-* jjtraveler-0.6.jar
-* logback.jar
-* org-apache-commons-logging.jar
-* owlapi-api.jar
-* pellet-jena.jar
-* pellet-query.jar
-* pellet.jar
-* relaxngDatatype-2.2.jar
-* shared-objects-1.4.9-p1.jar
-* slf4j.jar
-* xerces-2.7.1.jar
-* xsdlib-1.5.jar
-
 **Similarities** can be defined according to the ontology _similarity_ (examples in the file similarity.owl).
 
 A **full similarity** (or **similarity-on-undividual**) can be defined as follows:
